@@ -12,6 +12,7 @@ class MyTableViewCell: UITableViewCell{
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    var productVC:UIViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,9 +43,13 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
         
     }
-    
-   
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        productVC?.performSegue(withIdentifier: "segueDatails", sender: nil)
+        
+    }
 
     
 }
+
+
