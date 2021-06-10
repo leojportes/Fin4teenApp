@@ -7,14 +7,8 @@
 
 import UIKit
 
-var eData = [
-    EntertainmentApp(sectionType: "Filmes", imageGallery: ["becoming_buffet-500x739","capitalism","olobodewallstreet","enron","fome_poder-500x667","grande_aposta-500x780","madoff","mago_mentiras-500x742","margin_call-500x721"], name: ["Como ser Warren Buffett","Capitalismo: Uma história de amor","O Lobo de Wall Street","Enron: Os mais espertos da sala","Fome de Poder","A grande Aposta"," À caça de Madoff (Chasing Madoff)","O mago das mentiras","Margin Call: O dia antes do fim"]),
-    EntertainmentApp(sectionType: "Livros", imageGallery: ["","","","","","",""], name: ["","","","","","",""]),
-    EntertainmentApp(sectionType: "Séries/Programas de Tv", imageGallery: ["billions","blackmonday","industry","milliondollartraders","oSocio","sharkTank","americangreed"], name: ["","","","","","",""])
 
-]
-
-class ViewController: UIViewController{
+class ViewController: UIViewController, UICollectionViewDelegate{
     
 
     @IBAction func dismissAction(_ sender: Any) {
@@ -26,6 +20,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         // Do any additional setup after loading the view.
     }
 
@@ -43,7 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+    
         return eData[section].sectionType
     }
     
@@ -55,16 +50,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         cell.myCollectionView.tag = indexPath.section
         
+        cell.myCollectionView.delegate = self as UICollectionViewDelegate
+        
+     
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
+        if let header = view as? UITableViewHeaderFooterView {
+                header.textLabel?.textColor = .white
+                header.textLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 22)
+            }
         view.tintColor = .black
-
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let nome = eData[collectionView.tag].name[indexPath.row]
+        print(nome)
+        
+        
+        
+        let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+        data2.setConfig(name: nome)
+        self.navigationController?.pushViewController(data2, animated: true)
+        
     
-    
+    }
 }

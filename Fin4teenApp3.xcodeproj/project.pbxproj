@@ -23,6 +23,8 @@
 		C1AED095266DC2AE001B402D /* RecuperaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED092266DC2AE001B402D /* RecuperaViewController.swift */; };
 		C1AED096266DC2AE001B402D /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED093266DC2AE001B402D /* CadastroViewController.swift */; };
 		C1AED09A266DCA5B001B402D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED099266DCA5B001B402D /* HomeViewController.swift */; };
+		C1AED09D266E6A6E001B402D /* RegisterTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED09C266E6A6D001B402D /* RegisterTopics.swift */; };
+		C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED09F266E6BB7001B402D /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		C1AED092266DC2AE001B402D /* RecuperaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecuperaViewController.swift; sourceTree = "<group>"; };
 		C1AED093266DC2AE001B402D /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		C1AED099266DCA5B001B402D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C1AED09C266E6A6D001B402D /* RegisterTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTopics.swift; sourceTree = "<group>"; };
+		C1AED09F266E6BB7001B402D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E842DE57E4F0840D8461BDDB /* Pods-Fin4teenApp3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fin4teenApp3.release.xcconfig"; path = "Target Support Files/Pods-Fin4teenApp3/Pods-Fin4teenApp3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 				C1AED073266D8C84001B402D /* MyTableViewCell.swift */,
 				C1AED07A266D90A4001B402D /* MyCollectionView.swift */,
 				C1AED099266DCA5B001B402D /* HomeViewController.swift */,
+				C1AED09F266E6BB7001B402D /* DetailsViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C1AED059266D8825001B402D /* EntertainmentApp.swift */,
+				C1AED09C266E6A6D001B402D /* RegisterTopics.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +289,8 @@
 				C1AED09A266DCA5B001B402D /* HomeViewController.swift in Sources */,
 				C1AED02B266D86C5001B402D /* SceneDelegate.swift in Sources */,
 				C1AED07B266D90A4001B402D /* MyCollectionView.swift in Sources */,
+				C1AED09D266E6A6E001B402D /* RegisterTopics.swift in Sources */,
+				C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */,
 				C1AED05A266D8825001B402D /* EntertainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
