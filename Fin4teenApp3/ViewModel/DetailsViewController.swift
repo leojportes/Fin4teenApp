@@ -9,16 +9,27 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    //MARK: Variables
     
-    var dado:EntertainmentApp! = nil
-
-
+    
+//MARK: Variables
+    
+    //labels and images
+    var name = ""
+    var nameImage = ""
+    
+    //buttons
+    var linkNetflix = ""
+    var linkAmazon = ""
+    var linkApple = ""
+    
+    
 //MARK: Outlets
 
-@IBOutlet weak var detalhesLivrosLabel: UILabel?
 
-@IBOutlet weak var detalhesLivrosImage: UIImageView!
+    @IBOutlet weak var detailsTitleLabel: UILabel?
+    
+    @IBOutlet weak var detailsImage: UIImageView?
+
 
 
 //MARK: Actions
@@ -27,20 +38,47 @@ class DetailsViewController: UIViewController {
     navigationController?.popViewController(animated: true)
 }
 
-
-//MARK: LifeCycle
-    var name = ""
+    @IBAction func btNetflix(_ sender: Any) {
+        UIApplication.shared.open(URL(string: linkNetflix)! as URL, options: [:], completionHandler: nil)
+    }
     
+    @IBAction func btAmazon(_ sender: Any) {
+        UIApplication.shared.open(URL(string: linkAmazon)! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func btAppleTv(_ sender: Any) {
+        UIApplication.shared.open(URL(string: linkApple)! as URL, options: [:], completionHandler: nil)
+    }
+    
+    
+//MARK: LifeCycle
+ 
 override func viewDidLoad() {
     super.viewDidLoad()
-    detalhesLivrosLabel?.text = name
-    
+    detailsTitleLabel?.text = name
+    detailsImage?.image = UIImage(named: nameImage)
 }
+
+
+//MARK: Functions -
     
-    func setConfig(name: String){
-       
+    func setNameConfig(name: String){
         self.name = name
-
     }
-
+    
+    func setImageConfig(nameImage: String){
+        self.nameImage = nameImage
+    }
+    
+    func setLinkNetflix(linkNetflix: String){
+        self.linkNetflix = linkNetflix
+    }
+    
+    func setLinkAmazon(linkAmazon: String){
+        self.linkAmazon = linkAmazon
+    }
+    
+    func setLinkApple(linkApple: String){
+        self.linkApple = linkApple
+    }
 }

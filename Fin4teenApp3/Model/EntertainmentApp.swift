@@ -13,7 +13,9 @@ public struct EntertainmentApp {
     let sectionType:String
     let imageGallery: [String]
     let name:[String]
-    
+    let linkNetflix: [String]
+    let linkAmazon: [String]
+    let LinkApple: [String]
     
     
 }

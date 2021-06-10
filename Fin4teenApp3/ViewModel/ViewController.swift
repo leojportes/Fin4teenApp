@@ -10,22 +10,29 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate{
     
-
+ //MARK: Actions:
+    
     @IBAction func dismissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-
+    
+ //MARK: Outlets:
+    
     @IBOutlet weak var myTableView: UITableView!
+    
+    
+ //MARK: LifeCycle:
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        // Do any additional setup after loading the view.
     }
 
 
 }
+
+ //MARK: Extensions:
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -51,9 +58,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.myCollectionView.tag = indexPath.section
         
         cell.myCollectionView.delegate = self as UICollectionViewDelegate
-        
-     
-        
         return cell
     }
     
@@ -68,14 +72,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let nome = eData[collectionView.tag].name[indexPath.row]
-        print(nome)
-        
-        
+        let nameImage = eData[collectionView.tag].imageGallery[indexPath.row]
+
+        let linkNetflix = eData[collectionView.tag].linkNetflix[indexPath.row]
+        let linkAmazon = eData[collectionView.tag].linkAmazon[indexPath.row]
+        let linkApple = eData[collectionView.tag].LinkApple[indexPath.row]
         
         let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
-        data2.setConfig(name: nome)
-        self.navigationController?.pushViewController(data2, animated: true)
+        data2.setNameConfig(name: nome)
+        data2.setImageConfig(nameImage: nameImage)
+        data2.setLinkNetflix(linkNetflix: linkNetflix)
+        data2.setLinkAmazon(linkAmazon: linkAmazon)
+        data2.setLinkApple(linkApple: linkApple)
         
-    
+        self.navigationController?.pushViewController(data2, animated: true)
+ 
     }
 }
