@@ -146,12 +146,11 @@
                     <navigationItem key="navigationItem" id="02C-yx-7dT"/>
                     <connections>
                         <outlet property="myTableView" destination="W5Y-OI-2k8" id="GEv-V0-AP5"/>
-                        <segue destination="PQC-Zb-qKh" kind="show" identifier="segueDatails" id="dOk-uJ-gNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907" y="-583"/>
+            <point key="canvasLocation" x="1906.5420560747662" y="-583.15334773218149"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="03a-D5-CeT">
@@ -825,7 +824,7 @@
         <!--Details View Controller-->
         <scene sceneID="Fvf-kv-Dgu">
             <objects>
-                <viewController id="PQC-Zb-qKh" customClass="DetailsViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Details" id="PQC-Zb-qKh" customClass="DetailsViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRJ-6U-eky">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -847,7 +846,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Voltar"/>
                                 <connections>
-                                    <action selector="dismissAction:" destination="PQC-Zb-qKh" eventType="touchUpInside" id="EYc-8z-hyW"/>
+                                    <action selector="dismissActionLivros:" destination="PQC-Zb-qKh" eventType="touchUpInside" id="g7W-Wg-MEg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KV-eg-llD">
@@ -874,6 +873,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btLinkLivros" destination="PQC-Zb-qKh" eventType="touchUpInside" id="tpE-os-V4J"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utq-WA-cOf">
                                 <rect key="frame" x="20" y="118" width="388" height="1"/>
@@ -902,6 +904,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sVp-o8-ZV6"/>
+                    <connections>
+                        <outlet property="detalhesLivrosImage" destination="M5Z-Fi-Bew" id="zNR-zM-heo"/>
+                        <outlet property="detalhesLivrosLabel" destination="9KV-eg-llD" id="R3A-ak-PLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxU-KU-jkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,12 +14,12 @@ var eData = [
                      name: ["Como ser Warren Buffett","Capitalismo: Uma história de amor","O Lobo de Wall Street","Enron: Os mais espertos da sala","Fome de Poder","A grande Aposta"," À caça de Madoff (Chasing Madoff)","O mago das mentiras","Margin Call: O dia antes do fim"]),
     
     EntertainmentApp(sectionType: "Livros",
-                     imageGallery: ["","","","","","",""],
-                     name: ["","","","","","",""]),
+                     imageGallery: ["becoming_buffet-500x739","","","","","",""],
+                     name: ["teste","","","","","",""]),
     
     EntertainmentApp(sectionType: "Séries/Programas de Tv",
                      imageGallery:  ["billions","blackmonday","industry","milliondollartraders","oSocio","sharkTank","americangreed"],
-                     name: ["","","","","","",""])
+                     name: ["Billions","Black Monday","Industry","Million Dollar","","",""])
  
 
             ]

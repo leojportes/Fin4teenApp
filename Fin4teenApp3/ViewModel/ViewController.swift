@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UICollectionViewDelegate{
     
 
     @IBAction func dismissAction(_ sender: Any) {
@@ -49,7 +49,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         cell.myCollectionView.tag = indexPath.section
-        cell.productVC = self
+        
+        cell.myCollectionView.delegate = self as UICollectionViewDelegate
+        
+     
         
         return cell
     }
@@ -60,6 +63,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
                 header.textLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 22)
             }
         view.tintColor = .black
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let nome = eData[collectionView.tag].name[indexPath.row]
+        print(nome)
+        
+        
+        
+        let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+        data2.setConfig(name: nome)
+        self.navigationController?.pushViewController(data2, animated: true)
+        
+    
     }
 }

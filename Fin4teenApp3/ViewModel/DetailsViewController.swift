@@ -9,11 +9,38 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //MARK: Variables
+    
+    var dado:EntertainmentApp! = nil
 
-        
+
+//MARK: Outlets
+
+@IBOutlet weak var detalhesLivrosLabel: UILabel?
+
+@IBOutlet weak var detalhesLivrosImage: UIImageView!
+
+
+//MARK: Actions
+
+@IBAction func dismissActionLivros(_ sender: Any) {
+    navigationController?.popViewController(animated: true)
+}
+
+
+//MARK: LifeCycle
+    var name = ""
+    
+override func viewDidLoad() {
+    super.viewDidLoad()
+    detalhesLivrosLabel?.text = name
+    
+}
+    
+    func setConfig(name: String){
+       
+        self.name = name
+
     }
-    var sEntertainment:EntertainmentApp! = nil
 
 }
