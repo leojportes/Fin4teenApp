@@ -11,8 +11,9 @@ import UIKit
 
 public struct EntertainmentApp {
     let sectionType:String
-    let imageGallery: [String]
     let name:[String]
+    let imageGallery: [String]
+    let description:[String]
     let linkNetflix: [String]
     let linkAmazon: [String]
     let LinkApple: [String]

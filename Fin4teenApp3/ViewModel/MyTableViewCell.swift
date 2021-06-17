@@ -54,7 +54,7 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let nome = eData[myCollectionView.tag].name[indexPath.row]
+        let nome = eData[myCollectionView.tag].description[indexPath.row]
         print(nome)
         let navigation:UINavigationController = UINavigationController()
         let data2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Details") as! DetailsViewController

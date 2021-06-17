@@ -28,8 +28,6 @@ class ViewController: UIViewController, UICollectionViewDelegate{
         super.viewDidLoad()
        
     }
-
-
 }
 
  //MARK: Extensions:
@@ -70,15 +68,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
         let nome = eData[collectionView.tag].name[indexPath.row]
+        let description = eData[collectionView.tag].description[indexPath.row]
         let nameImage = eData[collectionView.tag].imageGallery[indexPath.row]
-
         let linkNetflix = eData[collectionView.tag].linkNetflix[indexPath.row]
         let linkAmazon = eData[collectionView.tag].linkAmazon[indexPath.row]
         let linkApple = eData[collectionView.tag].LinkApple[indexPath.row]
         
         let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+        data2.setDescriptionConfig(description: description)
         data2.setNameConfig(name: nome)
         data2.setImageConfig(nameImage: nameImage)
         data2.setLinkNetflix(linkNetflix: linkNetflix)

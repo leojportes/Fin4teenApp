@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     //labels and images
     var name = ""
     var nameImage = ""
+    var descriptionD = ""
     
     //buttons
     var linkNetflix = ""
@@ -25,12 +26,11 @@ class DetailsViewController: UIViewController {
     
 //MARK: Outlets
 
-
+    @IBOutlet weak var detailsDescription: UITextView?
+    
     @IBOutlet weak var detailsTitleLabel: UILabel?
     
     @IBOutlet weak var detailsImage: UIImageView?
-
-
 
 //MARK: Actions
 
@@ -57,11 +57,16 @@ override func viewDidLoad() {
     super.viewDidLoad()
     detailsTitleLabel?.text = name
     detailsImage?.image = UIImage(named: nameImage)
+    detailsDescription?.text = descriptionD
+    
 }
-
 
 //MARK: Functions -
     
+    func setDescriptionConfig(description: String){
+        self.descriptionD = description
+    }
+     
     func setNameConfig(name: String){
         self.name = name
     }
