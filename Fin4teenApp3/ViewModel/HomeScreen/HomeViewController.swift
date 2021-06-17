@@ -11,14 +11,10 @@ class HomeViewController: UIViewController {
 
     @IBAction func btLogout(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-        
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-
  
-
 }

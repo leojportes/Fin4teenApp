@@ -11,7 +11,7 @@
 		C11DE4212672AB5200070484 /* VideoClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4202672AB5200070484 /* VideoClassesViewController.swift */; };
 		C11DE4262672ABD500070484 /* VideoClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4252672ABD500070484 /* VideoClasses.swift */; };
 		C11DE4292672ABE400070484 /* RegisterClassesTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */; };
-		C12D2299267BD82C002C0275 /* ContateNosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2298267BD82C002C0275 /* ContateNosViewController.swift */; };
+		C12D2299267BD82C002C0275 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2298267BD82C002C0275 /* ContactUsViewController.swift */; };
 		C15A6E47267AB1F700B23B05 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6E46267AB1F700B23B05 /* StringConstants.swift */; };
 		C1AED029266D86C5001B402D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED028266D86C5001B402D /* AppDelegate.swift */; };
 		C1AED02B266D86C5001B402D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED02A266D86C5001B402D /* SceneDelegate.swift */; };
@@ -38,7 +38,7 @@
 		C11DE4202672AB5200070484 /* VideoClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClassesViewController.swift; sourceTree = "<group>"; };
 		C11DE4252672ABD500070484 /* VideoClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClasses.swift; sourceTree = "<group>"; };
 		C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterClassesTopics.swift; sourceTree = "<group>"; };
-		C12D2298267BD82C002C0275 /* ContateNosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContateNosViewController.swift; sourceTree = "<group>"; };
+		C12D2298267BD82C002C0275 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		C15A6E46267AB1F700B23B05 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		C1AED025266D86C5001B402D /* Fin4teenApp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fin4teenApp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AED028266D86C5001B402D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +110,43 @@
 			path = VideoClasses;
 			sourceTree = "<group>";
 		};
+		C12D229B267BDD4D002C0275 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C1AED099266DCA5B001B402D /* HomeViewController.swift */,
+				C12D22A1267BDF7E002C0275 /* VideoClasses */,
+				C12D22A0267BDF32002C0275 /* Recommendations */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		C12D229E267BDE93002C0275 /* ContactUsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C12D2298267BD82C002C0275 /* ContactUsViewController.swift */,
+			);
+			path = ContactUsScreen;
+			sourceTree = "<group>";
+		};
+		C12D22A0267BDF32002C0275 /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				C1AED02C266D86C5001B402D /* ViewController.swift */,
+				C1AED073266D8C84001B402D /* MyTableViewCell.swift */,
+				C1AED07A266D90A4001B402D /* MyCollectionView.swift */,
+				C1AED09F266E6BB7001B402D /* DetailsViewController.swift */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		C12D22A1267BDF7E002C0275 /* VideoClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C11DE4202672AB5200070484 /* VideoClassesViewController.swift */,
+			);
+			path = VideoClasses;
+			sourceTree = "<group>";
+		};
 		C1AED01C266D86C5001B402D = {
 			isa = PBXGroup;
 			children = (
@@ -131,16 +168,11 @@
 		C1AED027266D86C5001B402D /* Fin4teenApp3 */ = {
 			isa = PBXGroup;
 			children = (
+				C1AED039266D86C8001B402D /* Info.plist */,
 				C1AED043266D86DC001B402D /* Model */,
 				C1AED042266D86DA001B402D /* View */,
 				C1AED041266D86D8001B402D /* ViewModel */,
 				C1AED044266D8753001B402D /* Applications */,
-				C1AED028266D86C5001B402D /* AppDelegate.swift */,
-				C1AED039266D86C8001B402D /* Info.plist */,
-				C1AED02A266D86C5001B402D /* SceneDelegate.swift */,
-				C1AED031266D86C5001B402D /* Fin4teenApp3.xcdatamodeld */,
-				C1AED055266D880F001B402D /* GoogleService-Info.plist */,
-				C1AED090266DC26F001B402D /* Login */,
 			);
 			path = Fin4teenApp3;
 			sourceTree = "<group>";
@@ -148,13 +180,9 @@
 		C1AED041266D86D8001B402D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C1AED02C266D86C5001B402D /* ViewController.swift */,
-				C1AED073266D8C84001B402D /* MyTableViewCell.swift */,
-				C1AED07A266D90A4001B402D /* MyCollectionView.swift */,
-				C1AED099266DCA5B001B402D /* HomeViewController.swift */,
-				C1AED09F266E6BB7001B402D /* DetailsViewController.swift */,
-				C11DE4202672AB5200070484 /* VideoClassesViewController.swift */,
-				C12D2298267BD82C002C0275 /* ContateNosViewController.swift */,
+				C1AED090266DC26F001B402D /* Login */,
+				C12D229B267BDD4D002C0275 /* HomeScreen */,
+				C12D229E267BDE93002C0275 /* ContactUsScreen */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +209,10 @@
 		C1AED044266D8753001B402D /* Applications */ = {
 			isa = PBXGroup;
 			children = (
+				C1AED028266D86C5001B402D /* AppDelegate.swift */,
+				C1AED02A266D86C5001B402D /* SceneDelegate.swift */,
+				C1AED031266D86C5001B402D /* Fin4teenApp3.xcdatamodeld */,
+				C1AED055266D880F001B402D /* GoogleService-Info.plist */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -326,7 +358,7 @@
 				C1AED07B266D90A4001B402D /* MyCollectionView.swift in Sources */,
 				C1AED09D266E6A6E001B402D /* RegisterTopics.swift in Sources */,
 				C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */,
-				C12D2299267BD82C002C0275 /* ContateNosViewController.swift in Sources */,
+				C12D2299267BD82C002C0275 /* ContactUsViewController.swift in Sources */,
 				C1AED05A266D8825001B402D /* EntertainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

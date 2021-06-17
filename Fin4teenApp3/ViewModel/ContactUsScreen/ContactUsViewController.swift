@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContateNosViewController: UIViewController {
+class ContactUsViewController: UIViewController {
 
     @IBAction func dismissActionbt(_ sender: Any) {
         navigationController?.popViewController(animated: true)

@@ -1082,10 +1082,10 @@
             </objects>
             <point key="canvasLocation" x="1925" y="98"/>
         </scene>
-        <!--Contate Nos View Controller-->
+        <!--Contact Us View Controller-->
         <scene sceneID="fBo-at-uc4">
             <objects>
-                <viewController id="nck-Us-rzf" customClass="ContateNosViewController" customModule="Fin4teen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nck-Us-rzf" customClass="ContactUsViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jY2-fp-hSd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
