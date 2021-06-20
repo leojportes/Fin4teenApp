@@ -33,7 +33,67 @@ struct StringConstants {
     static let descriptionfacafortunacomacoes:String = "Em linguagem fluida e com uma narrativa recheada de histórias reais, o jornalista e investidor Décio Bazin mostra como trilhar com segurança os caminhos da Bolsa de Valores. Um livro que se tornou um cult, tendo vendido mais de 8.000 exemplares."
     static let descriptionacabecadoinvestidor:String = "Este livro foi escrito por uma psicanalista e psicóloga econômica, e não por uma especialista em finanças. Por isso, não espere encontrar aqui recomendações técnicas sobre investimentos. O foco é como a cabeça das pessoas funciona quando têm que tomar decisões sobre seu dinheiro e investi-lo, em especial no mercado financeiro. "
     static let descriptionooutroladodabolsa:String = "Há tempos a bolsa de valores não é mais um lugar somente de grandes bancos e fundos de investimentos. A cada ano, o número de pessoas físicas na bolsa tem aumentado de forma expressiva. Atraídos pela possibilidade de rendimentos muito superiores ao da renda fixa, essas pessoas aplicam todas as suas economias na renda variável e, por vezes, até vendem o carro e outros bens para comprar um número maior de ações."
-
     
+    static let listaLinksAppleTv:[String] = ["https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",
+                                             "https://www.appletv.com",]
+    
+    static let listaLinksAmazon:[String] = ["https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",
+                                            "https://www.amazon.com.br/prime",]
+    
+    static let listaLinksNetflix:[String] = ["https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",
+                                             "https://www.netflix.com",]
 }
 

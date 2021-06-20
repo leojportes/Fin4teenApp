@@ -17,7 +17,6 @@ public struct EntertainmentApp {
     let linkNetflix: [String]
     let linkAmazon: [String]
     let LinkApple: [String]
-    
-    
+
 }
 

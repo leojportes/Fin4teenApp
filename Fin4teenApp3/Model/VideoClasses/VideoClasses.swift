@@ -14,8 +14,5 @@ public struct VideoClasses {
     let sectionTypeClasses:String
     let imageGalleryClasses: [String]
     let nameClasses:[String]
-    
-    
-    
 }
 

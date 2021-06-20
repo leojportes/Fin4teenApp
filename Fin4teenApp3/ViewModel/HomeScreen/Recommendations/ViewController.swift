@@ -10,27 +10,27 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate{
     
- //MARK: Actions:
+    //MARK: Actions:
     
     @IBAction func dismissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     
- //MARK: Outlets:
+    //MARK: Outlets:
     
     @IBOutlet weak var myTableView: UITableView!
     
     
- //MARK: LifeCycle:
+    //MARK: LifeCycle:
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
 }
 
- //MARK: Extensions:
+//MARK: Extensions:
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -43,7 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    
+        
         return eData[section].sectionType
     }
     
@@ -61,29 +61,40 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let header = view as? UITableViewHeaderFooterView {
-                header.textLabel?.textColor = .white
-                header.textLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 22)
-            }
+            header.textLabel?.textColor = .white
+            header.textLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 22)
+        }
         view.tintColor = .black
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let nome = eData[collectionView.tag].name[indexPath.row]
         let description = eData[collectionView.tag].description[indexPath.row]
         let nameImage = eData[collectionView.tag].imageGallery[indexPath.row]
         let linkNetflix = eData[collectionView.tag].linkNetflix[indexPath.row]
         let linkAmazon = eData[collectionView.tag].linkAmazon[indexPath.row]
         let linkApple = eData[collectionView.tag].LinkApple[indexPath.row]
+        let section = eData[collectionView.tag].sectionType
         
-        let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
-        data2.setDescriptionConfig(description: description)
-        data2.setNameConfig(name: nome)
-        data2.setImageConfig(nameImage: nameImage)
-        data2.setLinkNetflix(linkNetflix: linkNetflix)
-        data2.setLinkAmazon(linkAmazon: linkAmazon)
-        data2.setLinkApple(linkApple: linkApple)
-        
-        self.navigationController?.pushViewController(data2, animated: true)
- 
+        print(section)
+        if section != "Livros"{
+            let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+            data2.setDescriptionConfig(description: description)
+            data2.setNameConfig(name: nome)
+            data2.setImageConfig(nameImage: nameImage)
+            data2.setLinkNetflix(linkNetflix: linkNetflix)
+            data2.setLinkAmazon(linkAmazon: linkAmazon)
+            data2.setLinkApple(linkApple: linkApple)
+            data2.setSectionType(sectionType: section)
+            self.navigationController?.pushViewController(data2, animated: true)
+        }else{
+            let data3 = self.storyboard?.instantiateViewController(withIdentifier: "VideoClassesDetails") as! VideoClassesDetailsViewController
+            self.navigationController?.pushViewController(data3, animated: true)
+            data3.setImageConfigVideoClasses(nameImage: nameImage)
+            data3.setNameConfigVideoClasses(name: nome)
+            data3.setDescriptionConfigVideoClasses(descriptionVidClas: description)
+            data3.setSectionTypeVclasses(sectionName: section)
+        }
     }
 }

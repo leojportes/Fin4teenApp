@@ -8,15 +8,16 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
     
     
-//MARK: Variables
+    
+    //MARK: Variables
     
     //labels and images
     var name = ""
     var nameImage = ""
     var descriptionD = ""
+    var sectionTypeName = ""
     
     //buttons
     var linkNetflix = ""
@@ -24,20 +25,22 @@ class DetailsViewController: UIViewController {
     var linkApple = ""
     
     
-//MARK: Outlets
-
+    //MARK: Outlets
+    
     @IBOutlet weak var detailsDescription: UITextView?
     
     @IBOutlet weak var detailsTitleLabel: UILabel?
     
     @IBOutlet weak var detailsImage: UIImageView?
-
-//MARK: Actions
-
-@IBAction func dismissActionLivros(_ sender: Any) {
-    navigationController?.popViewController(animated: true)
-}
-
+    
+    //MARK: Actions
+    
+    @IBAction func dismissActionLivros(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBOutlet weak var sectionType: UILabel!
+    
     @IBAction func btNetflix(_ sender: Any) {
         UIApplication.shared.open(URL(string: linkNetflix)! as URL, options: [:], completionHandler: nil)
     }
@@ -51,22 +54,23 @@ class DetailsViewController: UIViewController {
     }
     
     
-//MARK: LifeCycle
- 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    detailsTitleLabel?.text = name
-    detailsImage?.image = UIImage(named: nameImage)
-    detailsDescription?.text = descriptionD
+    //MARK: LifeCycle
     
-}
-
-//MARK: Functions -
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        detailsTitleLabel?.text = name
+        detailsImage?.image = UIImage(named: nameImage)
+        detailsDescription?.text = descriptionD
+        sectionType?.text = sectionTypeName
+        
+    }
+    
+    //MARK: Functions -
     
     func setDescriptionConfig(description: String){
         self.descriptionD = description
     }
-     
+    
     func setNameConfig(name: String){
         self.name = name
     }
@@ -85,5 +89,9 @@ override func viewDidLoad() {
     
     func setLinkApple(linkApple: String){
         self.linkApple = linkApple
+    }
+    
+    func setSectionType(sectionType: String){
+        self.sectionTypeName = sectionType
     }
 }

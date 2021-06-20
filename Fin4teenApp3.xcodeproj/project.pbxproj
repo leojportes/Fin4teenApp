@@ -12,6 +12,9 @@
 		C11DE4262672ABD500070484 /* VideoClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4252672ABD500070484 /* VideoClasses.swift */; };
 		C11DE4292672ABE400070484 /* RegisterClassesTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */; };
 		C12D2299267BD82C002C0275 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2298267BD82C002C0275 /* ContactUsViewController.swift */; };
+		C12D22A4267BE2B7002C0275 /* VideoClassesMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D22A3267BE2B7002C0275 /* VideoClassesMyTableViewCell.swift */; };
+		C12D22A7267BE2CE002C0275 /* VideoClassesMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D22A6267BE2CE002C0275 /* VideoClassesMyCollectionViewCell.swift */; };
+		C12D22AA267BE2FC002C0275 /* VideoClassesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D22A9267BE2FC002C0275 /* VideoClassesDetailsViewController.swift */; };
 		C15A6E47267AB1F700B23B05 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6E46267AB1F700B23B05 /* StringConstants.swift */; };
 		C1AED029266D86C5001B402D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED028266D86C5001B402D /* AppDelegate.swift */; };
 		C1AED02B266D86C5001B402D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED02A266D86C5001B402D /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 		C11DE4252672ABD500070484 /* VideoClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClasses.swift; sourceTree = "<group>"; };
 		C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterClassesTopics.swift; sourceTree = "<group>"; };
 		C12D2298267BD82C002C0275 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		C12D22A3267BE2B7002C0275 /* VideoClassesMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClassesMyTableViewCell.swift; sourceTree = "<group>"; };
+		C12D22A6267BE2CE002C0275 /* VideoClassesMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClassesMyCollectionViewCell.swift; sourceTree = "<group>"; };
+		C12D22A9267BE2FC002C0275 /* VideoClassesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClassesDetailsViewController.swift; sourceTree = "<group>"; };
 		C15A6E46267AB1F700B23B05 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		C1AED025266D86C5001B402D /* Fin4teenApp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fin4teenApp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AED028266D86C5001B402D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				C11DE4202672AB5200070484 /* VideoClassesViewController.swift */,
+				C12D22A3267BE2B7002C0275 /* VideoClassesMyTableViewCell.swift */,
+				C12D22A6267BE2CE002C0275 /* VideoClassesMyCollectionViewCell.swift */,
+				C12D22A9267BE2FC002C0275 /* VideoClassesDetailsViewController.swift */,
 			);
 			path = VideoClasses;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12D22A4267BE2B7002C0275 /* VideoClassesMyTableViewCell.swift in Sources */,
 				C15A6E47267AB1F700B23B05 /* StringConstants.swift in Sources */,
 				C11DE4212672AB5200070484 /* VideoClassesViewController.swift in Sources */,
 				C11DE4262672ABD500070484 /* VideoClasses.swift in Sources */,
@@ -356,7 +366,9 @@
 				C1AED09A266DCA5B001B402D /* HomeViewController.swift in Sources */,
 				C1AED02B266D86C5001B402D /* SceneDelegate.swift in Sources */,
 				C1AED07B266D90A4001B402D /* MyCollectionView.swift in Sources */,
+				C12D22A7267BE2CE002C0275 /* VideoClassesMyCollectionViewCell.swift in Sources */,
 				C1AED09D266E6A6E001B402D /* RegisterTopics.swift in Sources */,
+				C12D22AA267BE2FC002C0275 /* VideoClassesDetailsViewController.swift in Sources */,
 				C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */,
 				C12D2299267BD82C002C0275 /* ContactUsViewController.swift in Sources */,
 				C1AED05A266D8825001B402D /* EntertainmentApp.swift in Sources */,
