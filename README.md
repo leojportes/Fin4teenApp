@@ -21,8 +21,7 @@
 
 ## Descrição do Projeto
 <b>No aplicativo, há sessões de videoaulas, recomendações, que recomenda livros, filmes, séries e programas de TV. <br>
-<b>Também a sessão de consulta das criptomoedas e seu respectivo valor em tempo real vinculado a uma API.<br>
-<b>Os dados são requisitados via [API de criptomoedas](https://www.coinapi.io)<br>
+
 
 * [Instagram Fin4teen](https://www.instagram.com/fin4teenapp/)
  
