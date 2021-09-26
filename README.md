@@ -1,4 +1,4 @@
-![Badge](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white) ![Badge](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=Apple&logoColor=white) ![Badge](https://img.shields.io/badge/Criptos-000000?style=for-the-badge&logo=bitcoin&logoColor=white)
+![Badge](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white) ![Badge](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=Apple&logoColor=white) 
 
 
 
