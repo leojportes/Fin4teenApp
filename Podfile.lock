@@ -7,6 +7,9 @@ PODS:
     - FirebaseAuth (~> 7.11.0)
   - Firebase/CoreOnly (7.11.0):
     - FirebaseCore (= 7.11.0)
+  - Firebase/Database (7.11.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 7.11.0)
   - FirebaseAuth (7.11.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -21,6 +24,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30908.0)
+  - FirebaseDatabase (7.11.0):
+    - FirebaseCore (~> 7.0)
+    - leveldb-library (~> 1.22)
   - GoogleDataTransport (8.4.0):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -41,6 +47,7 @@ PODS:
   - GoogleUtilities/Reachability (7.4.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - leveldb-library (1.22.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -52,6 +59,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7.0)
   - AlamofireImage (~> 3.4.0)
   - Firebase/Auth
+  - Firebase/Database
 
 SPEC REPOS:
   trunk:
@@ -61,9 +69,11 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - leveldb-library
     - nanopb
     - PromisesObjC
 
@@ -74,12 +84,14 @@ SPEC CHECKSUMS:
   FirebaseAuth: 5fe4585c2ed847319f0ea68bd1d82c77e49ff9a0
   FirebaseCore: 907447d8917a4d3eb0cce2829c5a0ad21d90b432
   FirebaseCoreDiagnostics: 68ad972f99206cef818230f3f3179d52ccfb7f8c
+  FirebaseDatabase: 6c39fbf1c8514a2f32e610f9bf9ef30c535dc15a
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
   GoogleUtilities: 284cddc7fffc14ae1907efb6f78ab95c1fccaedc
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 84926d453cb08506b00d0f8c67fb400348baa1ae
+PODFILE CHECKSUM: ef78e390fde2ef28f6b9de1e3795737b6487c32e
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

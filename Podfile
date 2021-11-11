@@ -6,6 +6,7 @@ target 'Fin4teenApp3' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   
   pod 'Alamofire', '~> 4.7.0'
 
