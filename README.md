@@ -31,7 +31,9 @@ Aplicação foi desenvolvida em [Swift](https://www.apple.com/br/swift/) por mei
 
 ## Possíveis Melhorias
 <b>Responsividade</b>: Adequar layout responsivel para visualização em diferentes dispositivos mobile Apple.<br>
-<b>Testes</b>: Aplicação de testes unitários.
+<b>Testes</b>: Aplicação de testes unitários e testes de Snapshot.
+<b>ViewCode</b>: Aplicar viewcode em todo projeto, excluindo construção com Storyboard.
+<b>Acessibilidade</b>: Aplicar acessibilidade para deficiente visual.
 
 ## Build
 Necessário ter [Xcode](https://developer.apple.com/xcode/) instalado.
@@ -42,4 +44,4 @@ Necessário ter [Xcode](https://developer.apple.com/xcode/) instalado.
 <b>Alamofire Image version 3.4.0<br>
  
 
-Projeto gerado com Xcode version 12.5.
+Projeto gerado com Xcode version 12.4.
