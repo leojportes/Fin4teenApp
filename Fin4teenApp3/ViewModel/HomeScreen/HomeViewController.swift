@@ -8,13 +8,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    @IBAction func btLogout(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
+    
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    //MARK: - Actions
+
+    @IBAction func logoutButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
  
 }

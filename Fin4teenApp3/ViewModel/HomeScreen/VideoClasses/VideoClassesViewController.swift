@@ -7,27 +7,26 @@
 
 import UIKit
 
-class VideoClassesViewController: UIViewController, UICollectionViewDelegate{
+class VideoClassesViewController: UIViewController, UICollectionViewDelegate {
     
-    //MARK: Actions:
+    //MARK: - Actions:
     
     @IBAction func dismissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    //MARK: Outlets:
+    //MARK: - Outlets:
     
     @IBOutlet weak var myTableView: UITableView!
     
-    
-    //MARK: LifeCycle:
+    //MARK: - LifeCycle:
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-//MARK: Extensions:
+//MARK: - Extensions:
 
 extension VideoClassesViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -68,12 +67,12 @@ extension VideoClassesViewController: UITableViewDelegate, UITableViewDataSource
         let nome = eDataClasses[collectionView.tag].nameClasses[indexPath.row]
         let section = eDataClasses[collectionView.tag].sectionTypeClasses
         let nameImage = eDataClasses[collectionView.tag].imageGalleryClasses[indexPath.row]
-        let data2 = self.storyboard?.instantiateViewController(withIdentifier: "VideoClassesDetails") as! VideoClassesDetailsViewController
-        data2.setSectionTypeVclasses(sectionName: section)
-        data2.setNameConfigVideoClasses(name: nome)
-        data2.setImageConfigVideoClasses(nameImage: nameImage)
+        let setupVC = self.storyboard?.instantiateViewController(withIdentifier: "VideoClassesDetails") as! VideoClassesDetailsViewController
+        setupVC.setSectionTypeVclasses(sectionName: section)
+        setupVC.setNameConfigVideoClasses(name: nome)
+        setupVC.setImageConfigVideoClasses(nameImage: nameImage)
      
-        self.navigationController?.pushViewController(data2, animated: true)
+        self.navigationController?.pushViewController(setupVC, animated: true)
         
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9455806CF3865BDBC7EF8113 /* Pods_Fin4teenApp3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75627409568C297739FA0D4 /* Pods_Fin4teenApp3.framework */; };
+		C0686417273DD6FC009CD166 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0686416273DD6FC009CD166 /* StringExtension.swift */; };
+		C068641D273DD90E009CD166 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068641C273DD90E009CD166 /* Bundle.swift */; };
+		C0686421273DDA38009CD166 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0686420273DDA38009CD166 /* Localizable.swift */; };
+		C0686426273DDC9D009CD166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0686428273DDC9D009CD166 /* Localizable.strings */; };
 		C11DE4212672AB5200070484 /* VideoClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4202672AB5200070484 /* VideoClassesViewController.swift */; };
 		C11DE4262672ABD500070484 /* VideoClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4252672ABD500070484 /* VideoClasses.swift */; };
 		C11DE4292672ABE400070484 /* RegisterClassesTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */; };
@@ -28,8 +32,8 @@
 		C1AED074266D8C84001B402D /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED073266D8C84001B402D /* MyTableViewCell.swift */; };
 		C1AED07B266D90A4001B402D /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED07A266D90A4001B402D /* MyCollectionView.swift */; };
 		C1AED094266DC2AE001B402D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED091266DC2AE001B402D /* LoginViewController.swift */; };
-		C1AED095266DC2AE001B402D /* RecuperaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED092266DC2AE001B402D /* RecuperaViewController.swift */; };
-		C1AED096266DC2AE001B402D /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED093266DC2AE001B402D /* CadastroViewController.swift */; };
+		C1AED095266DC2AE001B402D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED092266DC2AE001B402D /* ResetPasswordViewController.swift */; };
+		C1AED096266DC2AE001B402D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED093266DC2AE001B402D /* SignUpViewController.swift */; };
 		C1AED09A266DCA5B001B402D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED099266DCA5B001B402D /* HomeViewController.swift */; };
 		C1AED09D266E6A6E001B402D /* RegisterTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED09C266E6A6D001B402D /* RegisterTopics.swift */; };
 		C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AED09F266E6BB7001B402D /* DetailsViewController.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		157A454F4E5077C5A0373E91 /* Pods-Fin4teenApp3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fin4teenApp3.debug.xcconfig"; path = "Target Support Files/Pods-Fin4teenApp3/Pods-Fin4teenApp3.debug.xcconfig"; sourceTree = "<group>"; };
 		B75627409568C297739FA0D4 /* Pods_Fin4teenApp3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fin4teenApp3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0686416273DD6FC009CD166 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C068641C273DD90E009CD166 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		C0686420273DDA38009CD166 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		C0686427273DDC9D009CD166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C11DE4202672AB5200070484 /* VideoClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClassesViewController.swift; sourceTree = "<group>"; };
 		C11DE4252672ABD500070484 /* VideoClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClasses.swift; sourceTree = "<group>"; };
 		C11DE4282672ABE400070484 /* RegisterClassesTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterClassesTopics.swift; sourceTree = "<group>"; };
@@ -60,8 +68,8 @@
 		C1AED073266D8C84001B402D /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C1AED07A266D90A4001B402D /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
 		C1AED091266DC2AE001B402D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C1AED092266DC2AE001B402D /* RecuperaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecuperaViewController.swift; sourceTree = "<group>"; };
-		C1AED093266DC2AE001B402D /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		C1AED092266DC2AE001B402D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		C1AED093266DC2AE001B402D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C1AED099266DCA5B001B402D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C1AED09C266E6A6D001B402D /* RegisterTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTopics.swift; sourceTree = "<group>"; };
 		C1AED09F266E6BB7001B402D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,41 @@
 				E842DE57E4F0840D8461BDDB /* Pods-Fin4teenApp3.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0686415273DD6D8009CD166 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C0686419273DD882009CD166 /* Localizable */,
+				C0686416273DD6FC009CD166 /* StringExtension.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C0686419273DD882009CD166 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				C068641B273DD896009CD166 /* Strings */,
+				C068641A273DD890009CD166 /* Enums */,
+				C068641C273DD90E009CD166 /* Bundle.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		C068641A273DD890009CD166 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C0686420273DDA38009CD166 /* Localizable.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C068641B273DD896009CD166 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				C0686428273DDC9D009CD166 /* Localizable.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		C11DE4232672AB8C00070484 /* Recommendations */ = {
@@ -177,6 +220,7 @@
 		C1AED027266D86C5001B402D /* Fin4teenApp3 */ = {
 			isa = PBXGroup;
 			children = (
+				C0686415273DD6D8009CD166 /* Infrastructure */,
 				C1AED039266D86C8001B402D /* Info.plist */,
 				C1AED043266D86DC001B402D /* Model */,
 				C1AED042266D86DA001B402D /* View */,
@@ -229,9 +273,9 @@
 		C1AED090266DC26F001B402D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C1AED093266DC2AE001B402D /* CadastroViewController.swift */,
+				C1AED093266DC2AE001B402D /* SignUpViewController.swift */,
 				C1AED091266DC2AE001B402D /* LoginViewController.swift */,
-				C1AED092266DC2AE001B402D /* RecuperaViewController.swift */,
+				C1AED092266DC2AE001B402D /* ResetPasswordViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -295,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0686426273DDC9D009CD166 /* Localizable.strings in Resources */,
 				C1AED038266D86C8001B402D /* LaunchScreen.storyboard in Resources */,
 				C1AED056266D880F001B402D /* GoogleService-Info.plist in Resources */,
 				C1AED035266D86C8001B402D /* Assets.xcassets in Resources */,
@@ -359,10 +404,11 @@
 				C11DE4292672ABE400070484 /* RegisterClassesTopics.swift in Sources */,
 				C1AED029266D86C5001B402D /* AppDelegate.swift in Sources */,
 				C1AED074266D8C84001B402D /* MyTableViewCell.swift in Sources */,
-				C1AED096266DC2AE001B402D /* CadastroViewController.swift in Sources */,
+				C1AED096266DC2AE001B402D /* SignUpViewController.swift in Sources */,
 				C1AED033266D86C5001B402D /* Fin4teenApp3.xcdatamodeld in Sources */,
 				C1AED094266DC2AE001B402D /* LoginViewController.swift in Sources */,
-				C1AED095266DC2AE001B402D /* RecuperaViewController.swift in Sources */,
+				C1AED095266DC2AE001B402D /* ResetPasswordViewController.swift in Sources */,
+				C068641D273DD90E009CD166 /* Bundle.swift in Sources */,
 				C1AED09A266DCA5B001B402D /* HomeViewController.swift in Sources */,
 				C1AED02B266D86C5001B402D /* SceneDelegate.swift in Sources */,
 				C1AED07B266D90A4001B402D /* MyCollectionView.swift in Sources */,
@@ -371,6 +417,8 @@
 				C12D22AA267BE2FC002C0275 /* VideoClassesDetailsViewController.swift in Sources */,
 				C1AED0A0266E6BB7001B402D /* DetailsViewController.swift in Sources */,
 				C12D2299267BD82C002C0275 /* ContactUsViewController.swift in Sources */,
+				C0686417273DD6FC009CD166 /* StringExtension.swift in Sources */,
+				C0686421273DDA38009CD166 /* Localizable.swift in Sources */,
 				C1AED05A266D8825001B402D /* EntertainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +426,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C0686428273DDC9D009CD166 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0686427273DDC9D009CD166 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C1AED02E266D86C5001B402D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

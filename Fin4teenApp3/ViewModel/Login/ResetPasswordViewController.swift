@@ -1,5 +1,5 @@
 //
-//  RecuperaViewController.swift
+//  ResetPasswordViewController.swift
 //  Fin4teen
 //
 //  Created by Leonardo Oliveira Portes on 03/05/21.

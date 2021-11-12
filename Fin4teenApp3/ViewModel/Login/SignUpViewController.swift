@@ -1,5 +1,5 @@
 //
-//  SingUpViewController.swift
+//  SignUpViewController.swift
 //  Fin4teen
 //
 //  Created by Leonardo Oliveira Portes on 03/05/21.
@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class SingUpViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     //MARK: Properties
     

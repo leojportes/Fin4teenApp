@@ -8,29 +8,26 @@
 import UIKit
 
 class VideoClassesDetailsViewController: UIViewController {
-    //MARK: Variables
     
-    //labels and images
-    var nameVideoClasses = ""
-    var nameImageVideoClasses = ""
-    var descriptionVideoClasses = ""
-    var sectionTypeVideoC = ""
+    //MARK: Private properties
     
-    //MARK: Outlets
+    private var nameVideoClasses = String.empty
+    private var nameImageVideoClasses = String.empty
+    private var descriptionVideoClasses = String.empty
+    private var sectionTypeVideoC = String.empty
+    
+    //MARK: IBOutlets
     
     @IBOutlet weak var detailsDescription: UITextView?
-    
     @IBOutlet weak var detailsTitleLabel: UILabel?
-    
     @IBOutlet weak var detailsImage: UIImageView?
-    
     @IBOutlet weak var sectionTypeVideoClasses: UILabel!
+    
     //MARK: Actions
     
     @IBAction func dismissActionLivros(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
     
     //MARK: LifeCycle
     
@@ -42,21 +39,21 @@ class VideoClassesDetailsViewController: UIViewController {
         sectionTypeVideoClasses?.text = sectionTypeVideoC
     }
     
-    //MARK: Functions VideClasses-
+    //MARK: - Methods
     
-    func setDescriptionConfigVideoClasses(descriptionVidClas: String){
+    func setDescriptionConfigVideoClasses(descriptionVidClas: String) {
         self.descriptionVideoClasses = descriptionVidClas
     }
     
-    func setNameConfigVideoClasses(name: String){
+    func setNameConfigVideoClasses(name: String) {
         self.nameVideoClasses = name
     }
     
-    func setImageConfigVideoClasses(nameImage: String){
+    func setImageConfigVideoClasses(nameImage: String) {
         self.nameImageVideoClasses = nameImage
     }
     
-    func setSectionTypeVclasses(sectionName: String){
+    func setSectionTypeVclasses(sectionName: String) {
         self.sectionTypeVideoC = sectionName
     }
     

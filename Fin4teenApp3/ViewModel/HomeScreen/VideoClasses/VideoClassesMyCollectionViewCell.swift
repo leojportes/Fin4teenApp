@@ -9,11 +9,9 @@ import UIKit
 
 class VideoClassesMyCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var myImageVideoClasses: UIImageView!
-    
-    
     @IBOutlet weak var myLabelVideoClasses: UILabel!
-    
-    
     
 }

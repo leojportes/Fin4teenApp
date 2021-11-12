@@ -10,29 +10,26 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate{
     
-    //MARK: Actions:
+    //MARK: - Actions
     
     @IBAction func dismissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    //MARK: Outlets:
+    //MARK: - IBOutlets
     
     @IBOutlet weak var myTableView: UITableView!
     
-    
-    //MARK: LifeCycle:
+    //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
-//MARK: Extensions:
+//MARK: - Extensions
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
@@ -52,7 +49,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
+        let kCell = "cell"
+        let cell = myTableView.dequeueReusableCell(withIdentifier: kCell, for: indexPath) as! MyTableViewCell
         cell.myCollectionView.tag = indexPath.section
         
         cell.myCollectionView.delegate = self as UICollectionViewDelegate
@@ -69,6 +67,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let books = "Livros"
+        let kDetail = "Details"
+        let kVideoClesses = "VideoClassesDetails"
+        
         let nome = eData[collectionView.tag].name[indexPath.row]
         let description = eData[collectionView.tag].description[indexPath.row]
         let nameImage = eData[collectionView.tag].imageGallery[indexPath.row]
@@ -77,24 +79,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let linkApple = eData[collectionView.tag].LinkApple[indexPath.row]
         let section = eData[collectionView.tag].sectionType
         
-        print(section)
-        if section != "Livros"{
-            let data2 = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
-            data2.setDescriptionConfig(description: description)
-            data2.setNameConfig(name: nome)
-            data2.setImageConfig(nameImage: nameImage)
-            data2.setLinkNetflix(linkNetflix: linkNetflix)
-            data2.setLinkAmazon(linkAmazon: linkAmazon)
-            data2.setLinkApple(linkApple: linkApple)
-            data2.setSectionType(sectionType: section)
-            self.navigationController?.pushViewController(data2, animated: true)
-        }else{
-            let data3 = self.storyboard?.instantiateViewController(withIdentifier: "VideoClassesDetails") as! VideoClassesDetailsViewController
-            self.navigationController?.pushViewController(data3, animated: true)
-            data3.setImageConfigVideoClasses(nameImage: nameImage)
-            data3.setNameConfigVideoClasses(name: nome)
-            data3.setDescriptionConfigVideoClasses(descriptionVidClas: description)
-            data3.setSectionTypeVclasses(sectionName: section)
+        if section != books {
+            let setupDetailVC = self.storyboard?.instantiateViewController(withIdentifier: kDetail) as! DetailsViewController
+            
+            setupDetailVC.setup(descriptionConfig: description,
+                                nameConfig: nome,
+                                imageConfig: nameImage,
+                                linkNetflix: linkNetflix,
+                                linkAmazon: linkAmazon,
+                                linkAppleTv: linkApple,
+                                sectionType: section)
+            
+            self.navigationController?.pushViewController(setupDetailVC, animated: true)
+        } else {
+            let setupVideoClassesVC = self.storyboard?.instantiateViewController(withIdentifier: kVideoClesses) as! VideoClassesDetailsViewController
+            self.navigationController?.pushViewController(setupVideoClassesVC, animated: true)
+            setupVideoClassesVC.setImageConfigVideoClasses(nameImage: nameImage)
+            setupVideoClassesVC.setNameConfigVideoClasses(name: nome)
+            setupVideoClassesVC.setDescriptionConfigVideoClasses(descriptionVidClas: description)
+            setupVideoClassesVC.setSectionTypeVclasses(sectionName: section)
         }
     }
 }

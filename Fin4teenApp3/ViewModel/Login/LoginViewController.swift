@@ -11,101 +11,123 @@ import Firebase
 class LoginViewController: UIViewController {
     
     
-    // MARK: Variables
+    //MARK: - Private properties
     
-    let button = UIButton(type: .custom)
-    var auth:Auth?
-    let imageicon = UIImageView()
-    var iconClick = false
+    private let button = UIButton(type: .custom)
+    private var auth:Auth?
+    private let imageicon = UIImageView()
+    private var iconClick = false
+    
+    //MARK: - Image identifiers
+    
+    private let eyeClosed: String = "eye_closed.png"
+    private let eyeOpen: String = "eye_open.png"
 
-    
-    // MARK: LifeCycle
-    
+    //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.auth = Auth.auth()
-      
-     
-        imageicon.image = UIImage(named: "eye_closed")
+        setupView()
+    }
+    
+    //MARK: - Private methods
+    
+    private func setupView() {
+        imageicon.image = UIImage(named: eyeClosed)
 
         let contentView = UIView()
         contentView.addSubview(imageicon)
 
-        contentView.frame = CGRect(x: 0, y: 0, width: UIImage(named:  "eye_closed.png")!.size.width, height: UIImage(named: "eye_closed.png")!.size.height)
-        imageicon.frame = CGRect(x: -10, y: 0, width: UIImage(named:  "eye_closed.png")!.size.width, height: UIImage(named: "eye_closed.png")!.size.height)
-        senhaTextField.rightView = contentView
-        senhaTextField.rightViewMode = .always
+        contentView.frame = CGRect(x: 0, y: 0,
+                                   width: UIImage(named:  eyeClosed)!.size.width,
+                                   height: UIImage(named: eyeClosed)!.size.height)
+        imageicon.frame = CGRect(x: -10, y: 0,
+                                 width: UIImage(named:  eyeClosed)!.size.width,
+                                 height: UIImage(named: eyeClosed)!.size.height)
+        
+        passwordTextField.rightView = contentView
+        passwordTextField.rightViewMode = .always
 
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                          action: #selector(imageTapped(tapGestureRecognizer:)))
         imageicon.isUserInteractionEnabled = true
         imageicon.addGestureRecognizer(tapGestureRecognizer)
     }
+    
     @objc func imageTapped(tapGestureRecognizer:UITapGestureRecognizer){
         let tappedImage = tapGestureRecognizer.view as! UIImageView
-
-        if iconClick{
-            iconClick=false
-            tappedImage.image = UIImage(named: "eye_open.png")
-            senhaTextField.isSecureTextEntry = false
-        }else{
-            iconClick=true
-            tappedImage.image = UIImage(named: "eye_closed.png")
-            senhaTextField.isSecureTextEntry = true
-            }
+        
+        if iconClick {
+            iconClick = false
+            tappedImage.image = UIImage(named: eyeOpen)
+            passwordTextField.isSecureTextEntry = false
+        } else {
+            iconClick = true
+            tappedImage.image = UIImage(named: eyeClosed)
+            passwordTextField.isSecureTextEntry = true
+        }
     }
 
-    
     // MARK: Outlets
     
-    
-    @IBOutlet weak var senhaTextField: UITextField!
-    
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var mailTextField: UITextField!
     
     // MARK: Actions
     
-    @IBAction func btEntrar(_ sender: UIButton) {
-        let email:String = self.emailTextField.text ?? ""
-        let senha:String = self.senhaTextField.text ?? ""
+    @IBAction func joinButton(_ sender: UIButton) {
         
+        let kIdentifierSegue = "biblioteca"
         
-        self.auth?.signIn(withEmail: email, password: senha, completion: { (usuario, error) in
-            if error != nil{
-                self.alert(title: "Ops! Algo deu errado.", message: "Dados incorretos, tente novamente!")
-//                print("Dados incorretos, tente novamente!")
-                
-            }else{
-                print("login ok")
-                self.performSegue(withIdentifier: "biblioteca", sender: nil)
-                 }
+        let mail:String = self.mailTextField.text ?? String.empty
+        let password:String = self.passwordTextField.text ?? String.empty
+        
+        self.auth?.signIn(withEmail: mail,
+                          password: password,
+                          completion: { (usuario, error) in
+            if error != nil {
+                self.alert(title: Localizable.titleAlertLogin.localize,
+                           message: Localizable.messageAlertLogin.localize)
+            } else {
+                self.performSegue(withIdentifier: kIdentifierSegue, sender: nil)
+            }
         })
     }
     
-    @IBAction func btInstagram(_ sender: AnyObject) {
+    @IBAction func instagramButton(_ sender: AnyObject) {
      
-        let alertControllerLivros = UIAlertController(title: "Atenção!", message: "Deseja acessar nosso perfil no Instagram?", preferredStyle: UIAlertController.Style.alert)
-        alertControllerLivros.addAction(UIAlertAction(title: "Acessar", style: .default, handler: { action in
-            self.urlInstagram()
-            
-        }))
-        self.present(alertControllerLivros, animated: true, completion: nil)
-    }
-
-
-    // MARK: Functions
+        let alert = UIAlertController(title: Localizable.titleAlertInsta.localize,
+                                      message: Localizable.messageAlertInsta.localize,
+                                      preferredStyle: UIAlertController.Style.alert)
         
+        alert.addAction(UIAlertAction(title: Localizable.actionAlertInsta.localize,
+                                      style: .default,
+                                      handler: { action in
+                                        self.urlInstagram()
+                                        
+                                      }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: - Methods
+    
     func urlInstagram(){
-        let url = "https://www.instagram.com/fin4teenapp/"
+        let url = Localizable.urlInsta.localize
         UIApplication.shared.open(URL(string: url)! as URL, options: [:], completionHandler: nil)
     }
     
-        func alert(title:String, message:String) {
-        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        alertController.addAction(ok)
-        self.present(alertController, animated: true, completion: nil)
-        }
+    func alert(title: String, message: String) {
+        
+        let alert:UIAlertController = UIAlertController(title: title,
+                                                                  message: message,
+                                                                  preferredStyle: .alert)
+        
+        let okButton:UIAlertAction = UIAlertAction(title: Localizable.action.localize,
+                                                   style: .cancel,
+                                                   handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
-
-

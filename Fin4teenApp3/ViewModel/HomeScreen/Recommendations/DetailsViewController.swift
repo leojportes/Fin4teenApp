@@ -9,37 +9,31 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    //MARK: - Private properties
+    
+    private var name = String.empty
+    private var nameImage = String.empty
+    private var descriptionD = String.empty
+    private var sectionTypeName = String.empty
+    
+    /// Buttons Streaming
+    private var linkNetflix = String.empty
+    private var linkAmazon = String.empty
+    private var linkApple = String.empty
     
     
-    //MARK: Variables
-    
-    //labels and images
-    var name = ""
-    var nameImage = ""
-    var descriptionD = ""
-    var sectionTypeName = ""
-    
-    //buttons
-    var linkNetflix = ""
-    var linkAmazon = ""
-    var linkApple = ""
-    
-    
-    //MARK: Outlets
+    //MARK: - IBOutlets
     
     @IBOutlet weak var detailsDescription: UITextView?
-    
     @IBOutlet weak var detailsTitleLabel: UILabel?
-    
     @IBOutlet weak var detailsImage: UIImageView?
+    @IBOutlet weak var sectionType: UILabel!
     
-    //MARK: Actions
+    //MARK: - Actions
     
     @IBAction func dismissActionLivros(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBOutlet weak var sectionType: UILabel!
     
     @IBAction func btNetflix(_ sender: Any) {
         UIApplication.shared.open(URL(string: linkNetflix)! as URL, options: [:], completionHandler: nil)
@@ -54,7 +48,7 @@ class DetailsViewController: UIViewController {
     }
     
     
-    //MARK: LifeCycle
+    //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,36 +56,26 @@ class DetailsViewController: UIViewController {
         detailsImage?.image = UIImage(named: nameImage)
         detailsDescription?.text = descriptionD
         sectionType?.text = sectionTypeName
+    }
+    
+    //MARK: - Methods
+    
+    func setup(descriptionConfig: String,
+               nameConfig: String,
+               imageConfig: String,
+               linkNetflix: String,
+               linkAmazon: String,
+               linkAppleTv: String,
+               sectionType: String) {
+        
+        self.descriptionD = descriptionConfig
+        self.name = nameConfig
+        self.nameImage = imageConfig
+        self.linkNetflix = linkNetflix
+        self.linkAmazon = linkAmazon
+        self.linkApple = linkAppleTv
+        self.sectionTypeName = sectionType
         
     }
     
-    //MARK: Functions -
-    
-    func setDescriptionConfig(description: String){
-        self.descriptionD = description
-    }
-    
-    func setNameConfig(name: String){
-        self.name = name
-    }
-    
-    func setImageConfig(nameImage: String){
-        self.nameImage = nameImage
-    }
-    
-    func setLinkNetflix(linkNetflix: String){
-        self.linkNetflix = linkNetflix
-    }
-    
-    func setLinkAmazon(linkAmazon: String){
-        self.linkAmazon = linkAmazon
-    }
-    
-    func setLinkApple(linkApple: String){
-        self.linkApple = linkApple
-    }
-    
-    func setSectionType(sectionType: String){
-        self.sectionTypeName = sectionType
-    }
 }

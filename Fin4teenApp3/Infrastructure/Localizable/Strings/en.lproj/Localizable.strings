@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Fin4teenApp3
+
+  Created by Leonardo Portes on 11/11/21.
+  
+*/
+
+//MARK: - Login
+
+"titleAlertLogin" = "Ops! Algo deu errado";
+"messageAlertLogin" = "Dados incorretos, tente novamente!";
+
+//MARK: - SignUp
+
+"titleAlertSignUp" = "Pronto!";
+"messageAlertSignUp" = "Email e senha cadastrados.";
+"actionAlertSignUp" = "";
+
+"messageFailSignUp" = "Falha ao cadastrar!";
+"titleFailSignUp" = "Atenção!";
+
+"passwordDiferents" = "Senhas diferentes! Tente novamente.";
+
+//MARK: - Instagram
+
+"titleAlertInsta" = "Atenção!";
+"messageAlertInsta" = "Deseja acessar nosso perfil no Instagram?";
+"actionAlertInsta" = "Acessar";
+"urlInsta" = "https://www.instagram.com/fin4teenapp/";
+
+//MARK: - Default Alert
+
+"action" = "Ok";
+
+

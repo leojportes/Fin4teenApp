@@ -226,7 +226,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btEntrar:" destination="H5D-KJ-eY5" eventType="touchUpInside" id="Gc4-e5-3zl"/>
+                                    <action selector="joinButton:" destination="H5D-KJ-eY5" eventType="touchUpInside" id="Gc4-e5-3zl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnR-7v-KxR">
@@ -305,7 +305,7 @@
                                 </constraints>
                                 <state key="normal" image="IconInstagram"/>
                                 <connections>
-                                    <action selector="btInstagram:" destination="H5D-KJ-eY5" eventType="touchUpInside" id="h44-yu-AGa"/>
+                                    <action selector="instagramButton:" destination="H5D-KJ-eY5" eventType="touchUpInside" id="h44-yu-AGa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -356,8 +356,8 @@
                     <navigationItem key="navigationItem" id="uAK-5u-iXU"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="emailTextField" destination="B3J-dG-XLV" id="3ci-c1-dj8"/>
-                        <outlet property="senhaTextField" destination="eZ2-BD-egM" id="yQq-th-49e"/>
+                        <outlet property="mailTextField" destination="B3J-dG-XLV" id="3ci-c1-dj8"/>
+                        <outlet property="passwordTextField" destination="eZ2-BD-egM" id="yQq-th-49e"/>
                         <segue destination="LhK-pZ-HRG" kind="show" identifier="biblioteca" id="GaL-Vm-2dZ"/>
                     </connections>
                 </viewController>
@@ -365,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="-307.00934579439252" y="-582.50539956803459"/>
         </scene>
-        <!--Cadastro View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="uAK-Sh-Qp1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="H9O-UN-bcX" customClass="CadastroViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="H9O-UN-bcX" userLabel="Sign Up View Controller" customClass="SignUpViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uc-iA-l9N">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,7 +468,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btCadastrar:" destination="H9O-UN-bcX" eventType="touchUpInside" id="13k-fP-Xpf"/>
+                                    <action selector="signUpButtonAction:" destination="H9O-UN-bcX" eventType="touchUpInside" id="13k-fP-Xpf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTw-zO-ja0">
@@ -549,19 +549,19 @@
                     <navigationItem key="navigationItem" id="IgI-iz-z3u"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="confirmasenhaTextField" destination="Ral-wS-BKx" id="QCq-6T-c7i"/>
-                        <outlet property="emailcadastrarTextField" destination="2un-lX-B7J" id="Egv-QP-tK4"/>
-                        <outlet property="senhacadastrarTextField" destination="3Il-Av-jGD" id="qaw-ON-14A"/>
+                        <outlet property="emailSignUpTextField" destination="2un-lX-B7J" id="Egv-QP-tK4"/>
+                        <outlet property="passwordSignUpCheckTextField" destination="Ral-wS-BKx" id="V28-rt-u0c"/>
+                        <outlet property="passwordSignUpTextField" destination="3Il-Av-jGD" id="qaw-ON-14A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVq-jY-DS0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="451.40186915887847" y="-582.50539956803459"/>
         </scene>
-        <!--Recupera View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="mq8-Nc-3gi">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="o8T-x6-JHZ" customClass="RecuperaViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="o8T-x6-JHZ" customClass="ResetPasswordViewController" customModule="Fin4teenApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6l-RG-Jbl">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -645,7 +645,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btRedefinirSenha:" destination="o8T-x6-JHZ" eventType="touchUpInside" id="zTT-7b-m7D"/>
+                                    <action selector="resetPasswordButton:" destination="o8T-x6-JHZ" eventType="touchUpInside" id="zTT-7b-m7D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redefinir Senha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-bL-jYM">
@@ -755,7 +755,7 @@
                                     <color key="titleColor" red="0.48640811439999998" green="0.48992598059999998" blue="0.50196313859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="btLogout:" destination="LhK-pZ-HRG" eventType="touchUpInside" id="1VO-KU-sbd"/>
+                                    <action selector="logoutButton:" destination="LhK-pZ-HRG" eventType="touchUpInside" id="1VO-KU-sbd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRj-3I-Wk8">
