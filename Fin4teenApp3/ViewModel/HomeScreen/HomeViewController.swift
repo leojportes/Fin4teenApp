@@ -2,23 +2,20 @@
 //  HomeViewController.swift
 //  Fin4teenApp3
 //
-//  Created by Leonardo Oliveira Portes on 07/06/21.
+//  Created by Leonardo Portes on 30/11/21.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
     
-    //MARK: - Life cycle
+    @IBAction func logoutButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
-    //MARK: - Actions
-
-    @IBAction func logoutButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
- 
 }

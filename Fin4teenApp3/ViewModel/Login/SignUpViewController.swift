@@ -62,7 +62,7 @@ class SignUpViewController: UIViewController {
             })
             
         } else {
-            self.alert(title: Localizable.titleAlertSignUp.localize,
+            self.alert(title: Localizable.messageFailSignUp.localize,
                        message: Localizable.passwordDiferents.localize)
             return
         }

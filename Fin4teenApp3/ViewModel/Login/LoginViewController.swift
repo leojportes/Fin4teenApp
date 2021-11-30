@@ -80,10 +80,10 @@ class LoginViewController: UIViewController {
         
         let kIdentifierSegue = "biblioteca"
         
-        let mail:String = self.mailTextField.text ?? String.empty
+        let email:String = self.mailTextField.text ?? String.empty
         let password:String = self.passwordTextField.text ?? String.empty
         
-        self.auth?.signIn(withEmail: mail,
+        self.auth?.signIn(withEmail: email,
                           password: password,
                           completion: { (usuario, error) in
             if error != nil {
