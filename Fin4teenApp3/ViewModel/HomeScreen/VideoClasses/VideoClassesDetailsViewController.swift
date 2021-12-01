@@ -15,15 +15,19 @@ class VideoClassesDetailsViewController: UIViewController {
     private var nameImageVideoClasses = String.empty
     private var descriptionVideoClasses = String.empty
     private var sectionTypeVideoC = String.empty
+    private var linkVideoClass = String.empty
     
     //MARK: IBOutlets
-    
-    @IBOutlet weak var detailsDescription: UITextView?
+
     @IBOutlet weak var detailsTitleLabel: UILabel?
     @IBOutlet weak var detailsImage: UIImageView?
     @IBOutlet weak var sectionTypeVideoClasses: UILabel!
     
     //MARK: Actions
+    
+    @IBAction func watchVideoButton(_ sender: UIButton) {
+        showAlertOrUrl(linkPlataform: linkVideoClass)
+    }
     
     @IBAction func dismissActionLivros(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -35,26 +39,44 @@ class VideoClassesDetailsViewController: UIViewController {
         super.viewDidLoad()
         detailsTitleLabel?.text = nameVideoClasses
         detailsImage?.image = UIImage(named: nameImageVideoClasses)
-        detailsDescription?.text = descriptionVideoClasses
         sectionTypeVideoClasses?.text = sectionTypeVideoC
     }
     
-    //MARK: - Methods
+    // MARK: - Public Methods
     
-    func setDescriptionConfigVideoClasses(descriptionVidClas: String) {
-        self.descriptionVideoClasses = descriptionVidClas
-    }
-    
-    func setNameConfigVideoClasses(name: String) {
+    func setup(name: String,
+               image: String,
+               sectionName: String,
+               linkVideo: String) {
         self.nameVideoClasses = name
-    }
-    
-    func setImageConfigVideoClasses(nameImage: String) {
-        self.nameImageVideoClasses = nameImage
-    }
-    
-    func setSectionTypeVclasses(sectionName: String) {
+        self.nameImageVideoClasses = image
         self.sectionTypeVideoC = sectionName
+        self.linkVideoClass = linkVideo
     }
     
+    // MARK: - Private methods
+    
+    private func showAlertOrUrl(linkPlataform: String) {
+        let withoutUrl = "semUrl"
+        
+        if linkPlataform == withoutUrl {
+            alertToWithoutURL()
+        } else {
+            UIApplication.shared.open(URL(string: linkPlataform)! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func alertToWithoutURL() {
+        let alert = UIAlertController(title: Constants.titleAlert, message: Constants.messageAlert, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.titleActionAlert, style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+private struct Constants {
+    static let titleAlert: String = "Ops, desculpe!"
+    static let messageAlert: String = "Infelizmente o conteúdo não está disponível nesta plataforma."
+    static let titleActionAlert: String = "Voltar"
 }

@@ -31,6 +31,7 @@ class VideoClassesViewController: UIViewController, UICollectionViewDelegate {
 extension VideoClassesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 200
     }
     
@@ -44,7 +45,8 @@ extension VideoClassesViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        let numberOfRowsInSection: Int = 1
+        return numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,14 +66,16 @@ extension VideoClassesViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let nome = eDataClasses[collectionView.tag].nameClasses[indexPath.row]
         let section = eDataClasses[collectionView.tag].sectionTypeClasses
         let nameImage = eDataClasses[collectionView.tag].imageGalleryClasses[indexPath.row]
+        let links = eDataClasses[collectionView.tag].linkUrl[indexPath.row]
+        
         let setupVC = self.storyboard?.instantiateViewController(withIdentifier: "VideoClassesDetails") as! VideoClassesDetailsViewController
-        setupVC.setSectionTypeVclasses(sectionName: section)
-        setupVC.setNameConfigVideoClasses(name: nome)
-        setupVC.setImageConfigVideoClasses(nameImage: nameImage)
-     
+        
+        setupVC.setup(name: nome, image: nameImage, sectionName: section, linkVideo: links)
+        
         self.navigationController?.pushViewController(setupVC, animated: true)
         
     }

@@ -16,14 +16,17 @@ class DetailsViewController: UIViewController {
     private var descriptionD = String.empty
     private var sectionTypeName = String.empty
     
-    /// Buttons Streaming
+    /// Constants to Buttons Streaming
     private var linkNetflix = String.empty
     private var linkAmazon = String.empty
     private var linkApple = String.empty
     
+    // MARK: - IBOutlets
     
-    //MARK: - IBOutlets
-    
+    @IBOutlet weak var appleTvButton: UIButton!
+    @IBOutlet weak var netflixButton: UIButton!
+    @IBOutlet weak var amazonButton: UIButton!
+ 
     @IBOutlet weak var detailsDescription: UITextView?
     @IBOutlet weak var detailsTitleLabel: UILabel?
     @IBOutlet weak var detailsImage: UIImageView?
@@ -35,18 +38,17 @@ class DetailsViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func btNetflix(_ sender: Any) {
-        UIApplication.shared.open(URL(string: linkNetflix)! as URL, options: [:], completionHandler: nil)
+    @IBAction func btNetflix(_ sender: UIButton!) {
+        showAlertOrUrl(linkPlataform: linkNetflix)
     }
     
-    @IBAction func btAmazon(_ sender: Any) {
-        UIApplication.shared.open(URL(string: linkAmazon)! as URL, options: [:], completionHandler: nil)
+    @IBAction func btAmazon(_ sender: UIButton!) {
+        showAlertOrUrl(linkPlataform: linkAmazon)
     }
     
-    @IBAction func btAppleTv(_ sender: Any) {
-        UIApplication.shared.open(URL(string: linkApple)! as URL, options: [:], completionHandler: nil)
+    @IBAction func btAppleTv(_ sender: UIButton!) {
+        showAlertOrUrl(linkPlataform: linkApple)
     }
-    
     
     //MARK: - LifeCycle
     
@@ -58,15 +60,15 @@ class DetailsViewController: UIViewController {
         sectionType?.text = sectionTypeName
     }
     
-    //MARK: - Methods
+    //MARK: - Public methods
     
-    func setup(descriptionConfig: String,
-               nameConfig: String,
-               imageConfig: String,
-               linkNetflix: String,
-               linkAmazon: String,
-               linkAppleTv: String,
-               sectionType: String) {
+    public func setup(descriptionConfig: String,
+                      nameConfig: String,
+                      imageConfig: String,
+                      linkNetflix: String,
+                      linkAmazon: String,
+                      linkAppleTv: String,
+                      sectionType: String) {
         
         self.descriptionD = descriptionConfig
         self.name = nameConfig
@@ -78,4 +80,29 @@ class DetailsViewController: UIViewController {
         
     }
     
+    // MARK: - Private methods
+    
+    private func alertToWithoutURL() {
+        let alert = UIAlertController(title: Constants.titleAlert, message: Constants.messageAlert, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.titleActionAlert, style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlertOrUrl(linkPlataform: String) {
+        let withoutUrl = "semUrl"
+        
+        if linkPlataform == withoutUrl {
+            alertToWithoutURL()
+        } else {
+            UIApplication.shared.open(URL(string: linkPlataform)! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+}
+
+private struct Constants {
+    static let titleAlert: String = "Ops, desculpe!"
+    static let messageAlert: String = "Infelizmente o conteúdo não está disponível nesta plataforma."
+    static let titleActionAlert: String = "Voltar"
 }

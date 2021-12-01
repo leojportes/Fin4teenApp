@@ -11,8 +11,9 @@ import UIKit
 
 
 public struct VideoClasses {
-    let sectionTypeClasses:String
+    let sectionTypeClasses: String
     let imageGalleryClasses: [String]
-    let nameClasses:[String]
+    let nameClasses: [String]
+    let linkUrl: [String]
 }
 

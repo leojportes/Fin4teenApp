@@ -91,13 +91,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                                 sectionType: section)
             
             self.navigationController?.pushViewController(setupDetailVC, animated: true)
+            
         } else {
+            
             let setupVideoClassesVC = self.storyboard?.instantiateViewController(withIdentifier: kVideoClesses) as! VideoClassesDetailsViewController
             self.navigationController?.pushViewController(setupVideoClassesVC, animated: true)
-            setupVideoClassesVC.setImageConfigVideoClasses(nameImage: nameImage)
-            setupVideoClassesVC.setNameConfigVideoClasses(name: nome)
-            setupVideoClassesVC.setDescriptionConfigVideoClasses(descriptionVidClas: description)
-            setupVideoClassesVC.setSectionTypeVclasses(sectionName: section)
+            
+            let links = eDataClasses[collectionView.tag].linkUrl[indexPath.row]
+            let name = eDataClasses[collectionView.tag].nameClasses[indexPath.row]
+            let imageName = eDataClasses[collectionView.tag].imageGalleryClasses[indexPath.row]
+            let sectionClasses = eDataClasses[collectionView.tag].sectionTypeClasses
+            
+            setupVideoClassesVC.setup(name: name,
+                                      image: imageName,
+                                      sectionName: sectionClasses,
+                                      linkVideo: links)
+        
         }
     }
 }
